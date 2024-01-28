@@ -6,6 +6,9 @@ public class CircleController : MonoBehaviour
 {
     public float initialScale = 2f;  // Initial zoom size
     public float shrinkTime = 0.2f; // Time required to reduce
+
+    public Animator noteEffect;
+
     private float rewardAppearTime = 0f; // Finished time
 
     private bool isClicked = false;
@@ -32,6 +35,7 @@ public class CircleController : MonoBehaviour
             {
                 isClicked = true;
                 // 响应点击事件，可以在这里处理点击后的逻辑
+                noteEffect.SetTrigger("miss");
             }
 
             // 控制圈的缩放
