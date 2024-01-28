@@ -6,7 +6,6 @@ public class AnimationCallback : MonoBehaviour
 {
     public void destroyObject()
     {
-        Debug.Log("destroy me!");
         Destroy(gameObject);
     }
 }

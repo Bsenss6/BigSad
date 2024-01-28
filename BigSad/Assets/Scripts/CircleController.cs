@@ -5,7 +5,7 @@ using UnityEngine;
 public class CircleController : MonoBehaviour
 {
     public float initialScale = 2f;  // Initial zoom size
-    public float shrinkTime = 0.2f; // Time required to reduce
+    public float shrinkTime = 0.1f; // Time required to reduce
 
     public Animator noteEffect;
 
@@ -42,8 +42,17 @@ public class CircleController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 isClicked = true;
-                // 响应点击事件，可以在这里处理点击后的逻辑
-                noteEffect.SetTrigger("miss");
+                float clickTime = Time.time;
+
+                // 在正负75毫秒的时间范围内触发奖励或失败动画
+                if (Mathf.Abs(clickTime - GetAnimationEndTime()) <= 0.075f)
+                {
+                    TriggerRewardAnimation();
+                }
+                else
+                {
+                    TriggerFailAnimation();
+                }
             }
 
             // 控制圈的缩放
@@ -87,5 +96,12 @@ public class CircleController : MonoBehaviour
             // 触发奖励动画的逻辑
             Invoke("TriggerRewardAnimation", rewardAppearTime);
         }
+    }
+
+    float GetAnimationEndTime()
+    {
+        // 返回动画结束的时间
+        // 这里需要根据你的具体情况实现，可能是根据动画的播放时长来计算
+        return 0f; // 需要替换为实际的结束时间
     }
 }

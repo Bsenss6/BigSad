@@ -48,10 +48,10 @@ public class AnimationManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animationEvents = ParseStringToAnimationEventDataArray(easyEvent);
+        animationEvents = ParseStringToAnimationEventDataArray(mediumEvent);
         foreach (AnimationEventData eventData in animationEvents)
         {
-            float time = eventData.time;
+            float time = eventData.time-7;
             string targetName = eventData.prefabName;
 
             // 使用Invoke, 在指定时间调用不同的动画
