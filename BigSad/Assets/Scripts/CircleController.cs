@@ -95,12 +95,10 @@ public class CircleController : MonoBehaviour
         // 在正负75毫秒的时间范围内触发奖励或失败动画
         if (Mathf.Abs(shrinkTime - playedTime) <= deviations)
         {
-            Debug.Log("reward");
             TriggerRewardAnimation();
         }
         else
         {
-            Debug.Log("miss");
             TriggerFailAnimation();
         }
     }
