@@ -71,7 +71,7 @@ public class AnimationManager : MonoBehaviour
 
     void PlayAnimation_k()
     {
-        GameObject noteInstance = Instantiate(note, jack.transform.position, Quaternion.identity);
+        GameObject noteInstance = Instantiate(note, king.transform.position, Quaternion.identity);
         // 设置接收按键
         CircleController circleController = noteInstance.GetComponentInChildren<CircleController>();
         if (circleController != null)
@@ -82,7 +82,7 @@ public class AnimationManager : MonoBehaviour
 
     void PlayAnimation_l()
     {
-        GameObject noteInstance = Instantiate(note, jack.transform.position, Quaternion.identity);
+        GameObject noteInstance = Instantiate(note, lion.transform.position, Quaternion.identity);
         // 设置接收按键
         CircleController circleController = noteInstance.GetComponentInChildren<CircleController>();
         if (circleController != null)
