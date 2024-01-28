@@ -236,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -565.01, y: -286}
-  m_SizeDelta: {x: 711.98, y: 549.07}
+  m_AnchoredPosition: {x: -657.75, y: -214.78998}
+  m_SizeDelta: {x: 526.5, y: 650.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226029230
 MonoBehaviour:
@@ -261,10 +261,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 18b4576e8d5ec4983b7c46bb33b5a003, type: 3}
-    m_FontSize: 80
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 7
     m_MaxSize: 140
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -272,7 +272,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'The God of Kaugh wants to make them happy again with tickles and whimsical
+    music. '
 --- !u!222 &226029231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -705,10 +706,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 18b4576e8d5ec4983b7c46bb33b5a003, type: 3}
-    m_FontSize: 80
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 7
     m_MaxSize: 140
     m_Alignment: 0
     m_AlignByGeometry: 0
