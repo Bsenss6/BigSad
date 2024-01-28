@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4539244733542748160}
   - component: {fileID: 8939508151994862622}
-  - component: {fileID: 523133345385440836}
   - component: {fileID: 380976725001601243}
   m_Layer: 0
   m_Name: Pig
@@ -86,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &523133345385440836
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109821662444030733}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &380976725001601243
 Animator:
   serializedVersion: 5
