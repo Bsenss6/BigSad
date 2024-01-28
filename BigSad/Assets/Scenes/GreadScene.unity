@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 1188270637}
   - component: {fileID: 1188270636}
   m_Layer: 0
-  m_Name: ScoreBoard-withWords
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
