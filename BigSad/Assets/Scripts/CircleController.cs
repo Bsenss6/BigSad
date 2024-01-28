@@ -14,6 +14,8 @@ public class CircleController : MonoBehaviour
     private bool isClicked = false;
     private bool isShrinking = false;
 
+    public GameObject circleManager;
+
     void Start()
     {
         // 获取当前缩放大小
@@ -29,6 +31,12 @@ public class CircleController : MonoBehaviour
 
     void Update()
     {
+        if (noteEffect == null)
+        {
+            Destroy(circleManager);
+            return;
+        }
+
         if (!isShrinking)
         {
             if (Input.GetMouseButtonDown(0))
@@ -60,13 +68,13 @@ public class CircleController : MonoBehaviour
     void TriggerFailAnimation()
     {
         // 触发失败动画的逻辑，可以在这里播放红色的失败动画
-        Debug.Log("Failed!");
+        noteEffect.SetTrigger("miss");
     }
 
     public void TriggerRewardAnimation()
     {
         // 触发奖励动画的逻辑，可以在这里播放绿色的奖励动画
-        Debug.Log("Reward!");
+        noteEffect.SetTrigger("perfect");
     }
 
     void OnMouseDown()

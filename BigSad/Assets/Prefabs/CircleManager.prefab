@@ -134,6 +134,7 @@ MonoBehaviour:
   initialScale: 2
   shrinkTime: 0.2
   noteEffect: {fileID: 4463674721446520149}
+  circleManager: {fileID: 342164085668042912}
 --- !u!1 &4267541549454004275
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +146,7 @@ GameObject:
   - component: {fileID: 2048911814829554003}
   - component: {fileID: 5917718283844098964}
   - component: {fileID: 4463674721446520149}
+  - component: {fileID: 8065917878400753687}
   m_Layer: 0
   m_Name: NoteEffect
   m_TagString: Untagged
@@ -240,6 +242,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8065917878400753687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267541549454004275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93047b9386b747c19efe25b3c90a649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6051904931362343807
 GameObject:
   m_ObjectHideFlags: 0
