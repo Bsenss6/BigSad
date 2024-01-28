@@ -236,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 697, y: -24}
-  m_SizeDelta: {x: 468.2, y: 650.42}
+  m_AnchoredPosition: {x: 661, y: 7}
+  m_SizeDelta: {x: 541.76, y: 681.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226029230
 MonoBehaviour:
@@ -266,13 +266,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 140
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The God of Kaugh wants to make them happy again with tickles and whimsical
+  m_Text: 'The God of Laugh wants to make them happy again with tickles and whimsical
     music. '
 --- !u!222 &226029231
 CanvasRenderer:
@@ -706,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -671, y: 74}
-  m_SizeDelta: {x: 500, y: 549.07}
+  m_AnchoredPosition: {x: -687.04, y: -33.45}
+  m_SizeDelta: {x: 467.93, y: 763.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627909373
 MonoBehaviour:
@@ -743,6 +743,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: those GameJam animals are sad cuz their programmers abandoned their team
+    in the middle of the Jam
 --- !u!222 &1627909374
 CanvasRenderer:
   m_ObjectHideFlags: 0
