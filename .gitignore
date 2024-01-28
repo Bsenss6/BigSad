@@ -1,2 +1,3 @@
 # mac os ignore file BigSad
 .DS_Store
+dist
