@@ -15,7 +15,7 @@ public class CircleController : MonoBehaviour
     private bool isClicked = false;
     private bool isShrinking = false;
     private float playedTime = 0f;
-    private float deviations = 0.25f; // 偏差时间
+    private float deviations = 0.2f; // 偏差时间
 
     void Start()
     {
