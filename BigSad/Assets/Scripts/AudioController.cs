@@ -18,7 +18,7 @@ public class AudioController : MonoBehaviour
     {
         if (!audioSource.isPlaying)
         {
-            // if audio is finished, goto next sence
+            // if audio is finished, goto next scene
             SceneSwitcher switcher = FindObjectOfType<SceneSwitcher>();
             switcher.LoadNextScene();
         }

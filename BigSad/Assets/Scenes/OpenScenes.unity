@@ -706,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -687.04, y: -33.45}
-  m_SizeDelta: {x: 467.93, y: 763.96}
+  m_AnchoredPosition: {x: -670.1, y: -52.28}
+  m_SizeDelta: {x: 501.81, y: 801.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627909373
 MonoBehaviour:
@@ -742,8 +742,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: those GameJam animals are sad cuz their programmers abandoned their team
-    in the middle of the Jam
+  m_Text: "those GameJam animals are in \"BIG SAD\" cuz their programmers abandoned
+    their team in the middle of the \nJam."
 --- !u!222 &1627909374
 CanvasRenderer:
   m_ObjectHideFlags: 0
