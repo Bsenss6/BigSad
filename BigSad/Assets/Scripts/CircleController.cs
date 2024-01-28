@@ -5,16 +5,17 @@ using UnityEngine;
 public class CircleController : MonoBehaviour
 {
     public float initialScale = 2f;  // Initial zoom size
-    public float shrinkTime = 0.1f; // Time required to reduce
+    public float shrinkTime = 0.2f; // Time required to reduce
+
+    public KeyCode keyCode = KeyCode.K;
 
     public Animator noteEffect;
-
-    private float rewardAppearTime = 0f; // Finished time
+    public GameObject circleManager;
 
     private bool isClicked = false;
     private bool isShrinking = false;
-
-    public GameObject circleManager;
+    private float playedTime = 0f;
+    private float deviations = 0.1f; // 偏差时间
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class CircleController : MonoBehaviour
 
     void Update()
     {
+        playedTime += Time.deltaTime;
         if (noteEffect == null)
         {
             Destroy(circleManager);
@@ -39,20 +41,11 @@ public class CircleController : MonoBehaviour
 
         if (!isShrinking)
         {
-            if (Input.GetMouseButtonDown(0))
+            // 检测键盘按键 keyCode 是否被按下
+            if (Input.GetKeyDown(keyCode))
             {
                 isClicked = true;
-                float clickTime = Time.time;
-
-                // 在正负75毫秒的时间范围内触发奖励或失败动画
-                if (Mathf.Abs(clickTime - GetAnimationEndTime()) <= 0.075f)
-                {
-                    TriggerRewardAnimation();
-                }
-                else
-                {
-                    TriggerFailAnimation();
-                }
+                checkReward();
             }
 
             // 控制圈的缩放
@@ -61,9 +54,9 @@ public class CircleController : MonoBehaviour
                 float shrinkSpeed = 1f / shrinkTime;
                 transform.localScale -= new Vector3(shrinkSpeed, shrinkSpeed, 0) * Time.deltaTime;
             }
-            else if (!isClicked)
+            else if (playedTime > shrinkTime + deviations)
             {
-                // 如果未点击而且圈已经缩小到正常大小，则触发失败动画
+                // 超时
                 TriggerFailAnimation();
             }
         }
@@ -93,15 +86,22 @@ public class CircleController : MonoBehaviour
             isClicked = true;
             isShrinking = true;
 
-            // 触发奖励动画的逻辑
-            Invoke("TriggerRewardAnimation", rewardAppearTime);
+            checkReward();
         }
     }
 
-    float GetAnimationEndTime()
+    void checkReward()
     {
-        // 返回动画结束的时间
-        // 这里需要根据你的具体情况实现，可能是根据动画的播放时长来计算
-        return 0f; // 需要替换为实际的结束时间
+        // 在正负75毫秒的时间范围内触发奖励或失败动画
+        if (Mathf.Abs(playedTime - shrinkTime) <= deviations)
+        {
+            Debug.Log("reward");
+            TriggerRewardAnimation();
+        }
+        else
+        {
+            Debug.Log("miss");
+            TriggerFailAnimation();
+        }
     }
 }
