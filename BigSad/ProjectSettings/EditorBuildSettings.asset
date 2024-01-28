@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OpenScenes.unity
     guid: 2dc6dbacab7ac4ccb93d528a08eeae9e
   - enabled: 1
+    path: Assets/Scenes/TipScene.unity
+    guid: 3186bff0b447c40198332e70cb928f4a
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: c64c540c20dbd4be8b11bb546dc834f2
   - enabled: 1
