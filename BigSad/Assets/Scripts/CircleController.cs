@@ -5,7 +5,7 @@ using UnityEngine;
 public class CircleController : MonoBehaviour
 {
     public float initialScale = 2f;  // Initial zoom size
-    public float shrinkTime = 0.2f; // Time required to reduce
+    public float shrinkTime = 0.3f; // Time required to reduce
 
     public KeyCode keyCode = KeyCode.K;
 
@@ -15,7 +15,7 @@ public class CircleController : MonoBehaviour
     private bool isClicked = false;
     private bool isShrinking = false;
     private float playedTime = 0f;
-    private float deviations = 0.1f; // 偏差时间
+    private float deviations = 0.2f; // 偏差时间
 
     void Start()
     {
@@ -93,7 +93,7 @@ public class CircleController : MonoBehaviour
     void checkReward()
     {
         // 在正负75毫秒的时间范围内触发奖励或失败动画
-        if (Mathf.Abs(playedTime - shrinkTime) <= deviations)
+        if (Mathf.Abs(shrinkTime - playedTime) <= deviations)
         {
             Debug.Log("reward");
             TriggerRewardAnimation();
