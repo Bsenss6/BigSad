@@ -10,6 +10,7 @@ public class CircleController : MonoBehaviour
     public KeyCode keyCode = KeyCode.K;
 
     public Animator noteEffect;
+    public Animator actorAnimator;
     public GameObject circleManager;
 
     private bool isClicked = false;
@@ -73,6 +74,7 @@ public class CircleController : MonoBehaviour
     {
         logicScript.addMiss();
         // 触发失败动画的逻辑，可以在这里播放红色的失败动画
+        actorAnimator.SetTrigger("sad");
         noteEffect.SetTrigger("miss");
     }
 
@@ -80,6 +82,7 @@ public class CircleController : MonoBehaviour
     {
         logicScript.addPerfect();
         // 触发奖励动画的逻辑，可以在这里播放绿色的奖励动画
+        actorAnimator.SetTrigger("happy");
         noteEffect.SetTrigger("perfect");
     }
 
