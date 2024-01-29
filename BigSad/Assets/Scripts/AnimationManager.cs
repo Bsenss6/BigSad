@@ -15,6 +15,7 @@ public class AnimationManager : MonoBehaviour
     public GameObject jack;
     public GameObject king;
     public GameObject lion;
+    public LogicScript logic;
 
     private AnimationEventData[] animationEvents;
 
@@ -67,6 +68,7 @@ public class AnimationManager : MonoBehaviour
         if(circleController != null)
         {
             circleController.keyCode = KeyCode.J;
+            circleController.logicScript = logic;
         }
     }
 
@@ -78,6 +80,7 @@ public class AnimationManager : MonoBehaviour
         if (circleController != null)
         {
             circleController.keyCode = KeyCode.K;
+            circleController.logicScript = logic;
         }
     }
 
@@ -89,6 +92,7 @@ public class AnimationManager : MonoBehaviour
         if (circleController != null)
         {
             circleController.keyCode = KeyCode.L;
+            circleController.logicScript = logic;
         }
     }
 
