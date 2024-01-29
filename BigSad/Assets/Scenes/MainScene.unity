@@ -493,6 +493,10 @@ PrefabInstance:
       propertyPath: lion
       value: 
       objectReference: {fileID: 690026963}
+    - target: {fileID: 7696006298521103478, guid: edaf041fc77014e6abe58bc314758ad9, type: 3}
+      propertyPath: logic
+      value: 
+      objectReference: {fileID: 1883355744}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

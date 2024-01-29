@@ -52,7 +52,7 @@ public class AnimationManager : MonoBehaviour
         animationEvents = ParseStringToAnimationEventDataArray(easyEvent);
         foreach (AnimationEventData eventData in animationEvents)
         {
-            float time = eventData.time-0.3f;
+            float time = eventData.time-0.6f;
             string targetName = eventData.prefabName;
 
             // 使用Invoke, 在指定时间调用不同的动画

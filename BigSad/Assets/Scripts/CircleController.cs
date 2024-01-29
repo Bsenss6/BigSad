@@ -15,7 +15,7 @@ public class CircleController : MonoBehaviour
     private bool isClicked = false;
     private bool isShrinking = true;
     private float playedTime = 0f;
-    private float shrinkTime = 0.3f; // Time required to reduce
+    private float shrinkTime = 0.6f; // Time required to reduce
     private float deviations = 0.3f; // 偏差时间
 
     void Start()
@@ -51,7 +51,7 @@ public class CircleController : MonoBehaviour
         // 控制圈的缩放
         if (transform.localScale.x > 1f)
         {
-            float shrinkSpeed = 1f / shrinkTime;
+            float shrinkSpeed = 1f / shrinkTime * 2;
             transform.localScale -= new Vector3(shrinkSpeed, shrinkSpeed, 0) * Time.deltaTime;
         }
 
@@ -71,7 +71,6 @@ public class CircleController : MonoBehaviour
 
     void TriggerFailAnimation()
     {
-        isClicked = true;
         logicScript.addMiss();
         // 触发失败动画的逻辑，可以在这里播放红色的失败动画
         noteEffect.SetTrigger("miss");
