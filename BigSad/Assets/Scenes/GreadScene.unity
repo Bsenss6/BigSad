@@ -930,7 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perfectText: {fileID: 2050906661}
   missText: {fileID: 1008820783}
-  script: {fileID: 0}
+  script: {fileID: 1521937573}
 --- !u!114 &1521937573
 MonoBehaviour:
   m_ObjectHideFlags: 0
