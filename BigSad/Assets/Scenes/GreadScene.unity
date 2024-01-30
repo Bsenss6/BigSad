@@ -322,6 +322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missCount: 0
   perfectCount: 0
+  perfectText: {fileID: 2050906661}
+  missText: {fileID: 1008820783}
 --- !u!4 &545303378
 Transform:
   m_ObjectHideFlags: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5728f8b3fd104cc1a0bf2cc23100ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
 --- !u!114 &765658062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perfectText: {fileID: 2050906661}
   missText: {fileID: 1008820783}
-  script: {fileID: 545303377}
+  logicScript: {fileID: 545303377}
 --- !u!1 &1714777647
 GameObject:
   m_ObjectHideFlags: 0
