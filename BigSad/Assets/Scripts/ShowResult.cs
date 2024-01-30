@@ -10,6 +10,10 @@ public class ShowResult : MonoBehaviour
     public Text missText;
     public LogicScript logicScript;
 
+    public SpriteRenderer happy;
+    public SpriteRenderer neutral;
+    public SpriteRenderer sad;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,28 @@ public class ShowResult : MonoBehaviour
         Debug.Log($"{logicScript.perfectCount} {logicScript.missCount}");
 
         if (logicScript != null) {
+            // set score text
             perfectText.text = "perfect : " + logicScript.perfectCount.ToString();
             missText.text = "miss : " + logicScript.missCount.ToString();
+            // set Grade emotions
+            if(logicScript.missCount > logicScript.perfectCount)
+            {
+                sad.enabled = true;
+                neutral.enabled = false;
+                happy.enabled = false;
+            }else if (logicScript.missCount == logicScript.perfectCount)
+            {
+                sad.enabled = false;
+                neutral.enabled = true;
+                happy.enabled = false;
+            }
+            else
+            {
+                sad.enabled = false;
+                neutral.enabled = false;
+                happy.enabled = true;
+            }
+
             logicScript.perfectCount = 0;
             logicScript.missCount = 0;
         }
