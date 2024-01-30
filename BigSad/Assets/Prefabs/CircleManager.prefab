@@ -132,8 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialScale: 2
-  shrinkTime: 0.2
+  logicScript: {fileID: 0}
+  keyCode: 107
   noteEffect: {fileID: 4463674721446520149}
+  actorAnimator: {fileID: 0}
   circleManager: {fileID: 342164085668042912}
 --- !u!1 &4267541549454004275
 GameObject:
@@ -207,8 +209,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1376631185
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a39f27f542afc4a0587caa8c6dd36161, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -325,8 +327,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1376631185
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 411cd2a7b87b84d05bdcc490255a7c51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
