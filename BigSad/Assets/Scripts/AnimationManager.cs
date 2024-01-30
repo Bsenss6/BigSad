@@ -53,7 +53,7 @@ public class AnimationManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animationEvents = ParseStringToAnimationEventDataArray(mediumEvent);
+        animationEvents = ParseStringToAnimationEventDataArray(easyEvent);
         foreach (AnimationEventData eventData in animationEvents)
         {
             float time = eventData.time-0.3f;

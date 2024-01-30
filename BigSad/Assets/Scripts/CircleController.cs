@@ -13,6 +13,9 @@ public class CircleController : MonoBehaviour
     public Animator actorAnimator;
     public GameObject circleManager;
 
+    public AudioSource missSfx;
+    public AudioSource perfectSfx;
+
     private bool isClicked = false;
     private bool isShrinking = true;
     private float playedTime = 0f;
@@ -60,7 +63,6 @@ public class CircleController : MonoBehaviour
         {
             if (playedTime > shrinkTime + deviations)
             {
-                Debug.Log($"time out shrinkTime {shrinkTime}, playedTime {playedTime}");
                 isClicked = true;
                 isShrinking = false;
                 // 超时
@@ -74,6 +76,7 @@ public class CircleController : MonoBehaviour
     {
         logicScript.addMiss();
         // 触发失败动画的逻辑，可以在这里播放红色的失败动画
+        missSfx.Play();
         actorAnimator.SetTrigger("sad");
         noteEffect.SetTrigger("miss");
     }
@@ -82,6 +85,7 @@ public class CircleController : MonoBehaviour
     {
         logicScript.addPerfect();
         // 触发奖励动画的逻辑，可以在这里播放绿色的奖励动画
+        perfectSfx.Play();
         actorAnimator.SetTrigger("happy");
         noteEffect.SetTrigger("perfect");
     }
@@ -101,7 +105,6 @@ public class CircleController : MonoBehaviour
         {
             isClicked = true;
 
-            Debug.Log($"shrinkTime {shrinkTime}, playedTime {playedTime}");
             // 在正负75毫秒的时间范围内触发奖励或失败动画
             if (Mathf.Abs(shrinkTime - playedTime) <= deviations)
             {
